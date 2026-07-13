@@ -1,0 +1,4 @@
+[submodule "thirdparty/neurobench"]
+	path = thirdparty/neurobench
+	url = git@github.com:KhaleelKhan/neurobench.git
+	branch = 2025_GC_EGRU
