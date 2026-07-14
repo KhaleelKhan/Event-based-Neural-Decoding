@@ -16,15 +16,34 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-# 2025-BioCAS-GC-SPICE
+# Event-based Neural Decoding for Neuroprosthetic Motor Control
+
+This is the official repository for the published work on event-based neural decoding for neuroprosthetic motor control, presented at the 2025 IEEE Biomedical Circuits and Systems Conference (BioCAS).
+
+## Citation
+
+If you use this work in your research, please cite it as:
+
+```bibtex
+@inproceedings{Nazeer2025EventBased,
+  author={Nazeer, K. K. and Arfa, S. and Jobst, M. and George, R. and Mayr, C.},
+  booktitle={2025 IEEE Biomedical Circuits and Systems Conference (BioCAS)},
+  title={Event-based Neural Decoding for Neuroprosthetic Motor Control},
+  year={2025},
+  address={Abu Dhabi, United Arab Emirates},
+  pages={334--338},
+  doi={10.1109/BioCAS67066.2025.00079},
+  keywords={Training; Wireless communication; Motor drives; Program processors; Event detection; Neuromorphics; Neuroprostheses; Spiking neural networks; Real-time systems; Decoding; Neural decoding; Event-based GRU; Spiking networks; Sparse coding; Neuromorphic; Edge AI; Real-time}
+}
+```
 
 ## Cloning the Repository
 
 Clone this repository along with its submodules:
 
 ```bash
-git clone --recurse-submodules git@github.com:CityU-BRAINSys-Lab/2025-BioCAS-GC-SPICE.git
-cd 2025-BioCAS-GC-SPICE
+git clone --recurse-submodules git@github.com:KhaleelKhan/Event-based-Neural-Decoding.git
+cd Event-based-Neural-Decoding
 ```
 
 If you already cloned without submodules, initialize them with:
@@ -32,6 +51,8 @@ If you already cloned without submodules, initialize them with:
 ```bash
 git submodule update --init --recursive
 ```
+
+**Note:** This repository includes the `neurobench` library as a git submodule in `thirdparty/neurobench/`. The `--recurse-submodules` flag ensures the submodule is cloned automatically. Without it, `thirdparty/neurobench/` will be empty until you run the submodule update command above. SSH access to GitHub is required for cloning the neurobench submodule.
 
 We include a patched version of the `neurobench` library as a submodule, which adds support for calculating MACs for the EGRU layer.  
 See the changes here: [changes](https://github.com/NeuroBench/neurobench/compare/2025_GC...KhaleelKhan:neurobench:2025_GC_EGRU)
